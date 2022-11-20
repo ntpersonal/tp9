@@ -1,0 +1,20 @@
+{
+  "employes": [
+    {
+      "matricule": 123456,
+      "nom": "Mounir Ben Ali",
+      "dateEmbauche": "2015-01-14",
+      "diplomes": [
+        {
+          "nomDiplome": "Bac",
+          "annee": 2010
+        },
+        {
+          "nomDiplome": "Licence",
+          "annee": 2013
+        }
+      ],
+      "id": 1
+    }
+  ]
+}

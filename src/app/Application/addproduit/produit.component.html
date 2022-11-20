@@ -1,0 +1,20 @@
+<div class="container">
+    <h3>Informations d'un produit</h3>
+    <form [formGroup]="productForm">
+        <div>
+            <label> Identifiant du produit </label>
+            <input class="form-control" type="number" formControlName="id">
+        </div>
+        <div>
+            <label>Libellé</label>
+            <input class="form-control" type="text" formControlName="libelle">
+        </div>
+
+        <h5>Définition des couleurs du produit</h5>
+ 
+        <input type="button" value="Ajouter une couleur" class="btn btn-secondary btn-sm" > <br>
+      
+        <input type="submit" class="btn btn-success" value="Afficher">
+        <input type="button" class="btn btn-warning" value="Vider">
+    </form>
+</div>
