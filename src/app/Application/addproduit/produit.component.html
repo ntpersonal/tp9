@@ -4,17 +4,29 @@
         <div>
             <label> Identifiant du produit </label>
             <input class="form-control" type="number" formControlName="id">
+            <div *ngIf="idProduct && idProduct.invalid && idProduct.touched"
+class="alert alert-danger" >
+L'identifiant doit être un nombre
+</div>
+
         </div>
         <div>
             <label>Libellé</label>
             <input class="form-control" type="text" formControlName="libelle">
+            <div *ngIf="isValidPattern()" class="alert alert-warning">
+                Le libelle doit commencer par une majuscule suivie d'au moins 1 lettre
+               </div>
+               <div *ngIf="libelle && libelle.touched" class="alert ">
+                 le libellé est obligatoire
+               </div>
+               
         </div>
 
         <h5>Définition des couleurs du produit</h5>
  
         <input type="button" value="Ajouter une couleur" class="btn btn-secondary btn-sm" > <br>
       
-        <input type="submit" class="btn btn-success" value="Afficher">
+        <input type="submit" [disabled]="productForm.invalid" class="btn btn-success" value="Afficher">
         <input type="button" class="btn btn-warning" value="Vider">
     </form>
 </div>
